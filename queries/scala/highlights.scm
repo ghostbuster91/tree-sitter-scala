@@ -23,8 +23,6 @@
 (class_parameter 
   name: (identifier) @parameter)
 
-(interpolation) @none
-
 ;; types
 
 (type_definition
@@ -128,10 +126,12 @@
   (symbol_literal)
   (string)
   (character_literal)
-  (interpolated_string_expression)
+  (interpolated_string)
 ] @string
 
 (interpolation "$" @punctuation.special)
+(interpolation (block)) @embedded
+(interpolation (identifier) @local.reference)
 
 ;; keywords
 

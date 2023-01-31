@@ -73,5 +73,6 @@ object Hello {
   val hello = c"some $stuff"
 //            ^function.call
 //                   ^punctuation.special
+//                     ^local.reference
 }
 
